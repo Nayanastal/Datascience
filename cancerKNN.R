@@ -15,3 +15,43 @@ wbcd_test_labels = wbcd[470:569, 2]
 wbcd_test_pred = knn(wbcd_train, wbcd_test, wbcd_train_labels,21)
 print(wbcd_test_pred)
 CrossTable(x = wbcd_test_labels, y = wbcd_test_pred, prop.chisq=FALSE)
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+ [1] B B B B B B B B B B M B B B B B B B M B B B B M B B B B B M M B M B M B B
+ [38] B B B M B B M B B B M M B B B M B B B B B B B B B B B M B M M B B B B B B
+ [75] B B B B B B B B B B B B B B B B B B B M M M M M M B
+Levels: B M
+> CrossTable(x = wbcd_test_labels, y = wbcd_test_pred, prop.chisq=FALSE)
+
+ 
+   Cell Contents
+|-------------------------|
+|                       N |
+|           N / Row Total |
+|           N / Col Total |
+|         N / Table Total |
+|-------------------------|
+
+ 
+Total Observations in Table:  100 
+
+ 
+                 | wbcd_test_pred 
+wbcd_test_labels |         B |         M | Row Total | 
+-----------------|-----------|-----------|-----------|
+               B |        77 |         0 |        77 | 
+                 |     1.000 |     0.000 |     0.770 | 
+                 |     0.975 |     0.000 |           | 
+                 |     0.770 |     0.000 |           | 
+-----------------|-----------|-----------|-----------|
+               M |         2 |        21 |        23 | 
+                 |     0.087 |     0.913 |     0.230 | 
+                 |     0.025 |     1.000 |           | 
+                 |     0.020 |     0.210 |           | 
+-----------------|-----------|-----------|-----------|
+    Column Total |        79 |        21 |       100 | 
+                 |     0.790 |     0.210 |           | 
+-----------------|-----------|-----------|-----------|
+
+ 
+> 
